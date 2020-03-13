@@ -1,7 +1,6 @@
 import React from "react";
 
 const RelatedItem = ({ image }) => {
-  console.log(image);
   return (
     <div className="recommended-item-container">
       <img
@@ -14,3 +13,4 @@ const RelatedItem = ({ image }) => {
   );
 };
 export default RelatedItem;
+  

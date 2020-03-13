@@ -1,40 +1,39 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 const app = express();
-const port = 3000;
-
+const port = 8082;
 
 // Middleware
-app.use(express.static(path.join(__dirname, '../client/public')));
+app.use(express.static(path.join(__dirname, "../client/public")));
 app.use(express.json());
 
 // Routes
-app.get('/allTodos', (req, res) => {
+app.get("/allTodos", (req, res) => {
   getAllTodos()
-    .then((result) => {
-      res.send(result)
+    .then(result => {
+      res.send(result);
     })
-    .catch((err) => {
+    .catch(err => {
       res.send(err);
     });
 });
 
-app.post('/addTodo', (req, res) => {
+app.post("/addTodo", (req, res) => {
   addTodo(req.body.todo)
-    .then((result) => {
+    .then(result => {
       res.send(result);
     })
-    .catch((err) => {
+    .catch(err => {
       res.send(err);
     });
 });
 
-app.delete('/deleteTodo/:todoID', (req, res) => {
+app.delete("/deleteTodo/:todoID", (req, res) => {
   deleteTodo(req.params.todoID)
-    .then((result) => {
+    .then(result => {
       res.send(result);
     })
-    .catch((err) => {
+    .catch(err => {
       res.send(err);
     });
 });

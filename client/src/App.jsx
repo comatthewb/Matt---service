@@ -36,10 +36,9 @@ class RelatedItems extends Component {
           </h1>
           <div>
             {this.state.imagesURL.map((singleImage, index) => {
-              console.log(singleImage);
               const description = this.state.description[index];
               return (
-                <div className="item-description-parent">
+                <div key={index} className="item-description-parent">
                   <RelatedItem image={singleImage} />
                   <RelatedItemDescription description={description} />
                 </div>

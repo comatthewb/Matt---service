@@ -1,11 +1,12 @@
-DROP DATABASE IF EXISTS fullstack_todo;
+DROP DATABASE IF EXISTS pirate_data;
 
-CREATE DATABASE fullstack_todo;
+CREATE DATABASE pirate_data;
 
-USE fullstack_todo;
+USE pirate_data;
 
-CREATE TABLE todos (
-  todoID INT NOT NULL AUTO_INCREMENT,
-  todo_name VARCHAR(255) NOT NULL,
-  PRIMARY KEY(todoID)
+CREATE TABLE ArrtoZone_Inventory (
+  itemID INT NOT NULL AUTO_INCREMENT,
+  item_name VARCHAR(255) NOT NULL,
+  item_link VARCHAR (255) NOT NULL
+  PRIMARY KEY(itemID)
 );

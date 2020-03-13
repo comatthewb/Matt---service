@@ -8,6 +8,7 @@ body {
 }
 
 .other-customers-parent-div {
+  position: fixed;
   height: 227px;
   width: 1150px !important;
   background-color: white;
@@ -33,7 +34,7 @@ body {
 }
 
 .recommended-item-description-parent {
-  width: 117%;
+  width: 118%;
   position: relative;
   top: 90px;
   left: -35px;
