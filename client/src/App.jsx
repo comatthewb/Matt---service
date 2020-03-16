@@ -9,20 +9,20 @@ class RelatedItems extends Component {
 
     this.state = {
       imagesURL: [
-        "C:/Users/dchen/FullStackTodo/client/public/images/pirate-canon-life-size-replica-2_1024x1024.jpg",
-        "C:/Users/dchen/FullStackTodo/client/public/images/sail.png",
-        "C:/Users/dchen/FullStackTodo/client/public/images/wheel.jpg",
-        "C:/Users/dchen/FullStackTodo/client/public/images/flintlock.jpg",
-        "C:/Users/dchen/FullStackTodo/client/public/images/flag.png",
-        "C:/Users/dchen/FullStackTodo/client/public/images/hook.jpg"
+        "https://cdn.shopify.com/s/files/1/0068/3370/0916/products/pirate-canon-life-size-replica-2_1024x1024.jpg?v=1571279010",
+        "https://dygtyjqp7pi0m.cloudfront.net/i/35395/30473232_1.jpg?v=8D5E45EB7E218E0",
+        "https://images-na.ssl-images-amazon.com/images/I/71JeDEZd4YL._AC_SL1500_.jpg",
+        "https://www.outfit4events.com/runtime/cache/images/redesignProductFull/hs64144-01.JPG",
+        "https://flagsinternational.com/wp-content/uploads/2018/02/jolly-roger1b_1_1.jpeg",
+        "https://i5.walmartimages.com/asr/1dfc522a-c3df-405d-bdc2-cd6d9ac78768_1.11be8f15868a2b57db233a2b03c5fa18.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff"
       ],
       description: [
-        "Dorman Window Lift Motor 741-578",
-        "Duralast Platinum Battery H7-AGM Group Size 94R 850 CCA",
-        "STP Cabin Air Filter CAF1816P",
-        "Bosch Envision 26in Beam Wiper Blade",
-        "Bosch Icon 26in Beam Wiper Blade",
-        "XtraVision Fog Light/Headlight Bulb H11XV-2"
+        "cannon",
+        "sail",
+        "wheel",
+        "flintlock",
+        "jolly roger",
+        "hook"
       ]
     };
   }
