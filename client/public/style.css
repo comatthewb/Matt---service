@@ -33,11 +33,16 @@ body {
   padding-left: 20px;
 }
 
+.recommended-item-container:hover{
+  cursor: pointer;
+}
+
 .recommended-item-description-parent {
   width: 118%;
   position: relative;
   top: 90px;
   left: -35px;
+  text-align: center;
   /* padding-left: 20px; */
 }
 
@@ -49,6 +54,11 @@ body {
   font-size: 14px;
   top: -10px;
   margin-right: 20px;
+}
+
+.recommended-item-description:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .item-description-parent {

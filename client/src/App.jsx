@@ -11,6 +11,7 @@ class RelatedItems extends Component {
       imagesURL: [],
       description: []
     };
+    this.clickHandler = this.clickHandler.bind(this);
   }
 
   componentDidMount() {
@@ -38,6 +39,10 @@ class RelatedItems extends Component {
       });
   }
 
+  clickHandler() {
+    console.log('this was clicked');
+  }
+
   render() {
     return (
       <div className="other-customers-parent-div">
@@ -50,8 +55,8 @@ class RelatedItems extends Component {
               const description = this.state.description[index];
               return (
                 <div key={index} className="item-description-parent">
-                  <RelatedItem image={singleImage} />
-                  <RelatedItemDescription description={description} />
+                  <RelatedItem onClick={this.clickHandler} image={singleImage} />
+                  <RelatedItemDescription onClick={this.clickHandler} description={description} />
                 </div>
               );
             })}

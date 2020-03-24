@@ -1,9 +1,9 @@
 import React from "react";
 
-const RelatedItemDescription = ({ description }) => {
+const RelatedItemDescription = (props) => {
   return (
     <div className="recommended-item-description-parent">
-      <p className="recommended-item-description">{description}</p>
+      <p className="recommended-item-description" onClick={props.onClick}>{props.description}</p>
     </div>
   );
 };
