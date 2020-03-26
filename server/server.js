@@ -17,30 +17,10 @@ app.get("/items", (req, res) => {
       console.log(err);
     } else {
       console.log(result);
-
       res.send(result);
     }
   });
 });
 
-// app.post("/addTodo", (req, res) => {
-//   addTodo(req.body.todo)
-//     .then(result => {
-//       res.send(result);
-//     })
-//     .catch(err => {
-//       res.send(err);
-//     });
-// });
-
-// app.delete("/deleteTodo/:todoID", (req, res) => {
-//   deleteTodo(req.params.todoID)
-//     .then(result => {
-//       res.send(result);
-//     })
-//     .catch(err => {
-//       res.send(err);
-//     });
-// });
 
 app.listen(port, () => console.log(`Server is running on ${port}...`));
