@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const connection = mysql.createConnection({
   host: "localhost", //host.docker.internal
   user: "root",
-  password: "password",
+  password: "hratx47hratx47",
   database: "pirate_data"
 });
 
