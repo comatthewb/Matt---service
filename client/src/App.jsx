@@ -40,7 +40,7 @@ class RelatedItems extends Component {
   }
 
   clickHandler() {
-    console.log('this was clicked');
+    console.log("this was clicked");
   }
 
   render() {
@@ -55,8 +55,14 @@ class RelatedItems extends Component {
               const description = this.state.description[index];
               return (
                 <div key={index} className="item-description-parent">
-                  <RelatedItem onClick={this.clickHandler} image={singleImage} />
-                  <RelatedItemDescription onClick={this.clickHandler} description={description} />
+                  <RelatedItem
+                    onClick={this.clickHandler}
+                    image={singleImage}
+                  />
+                  <RelatedItemDescription
+                    onClick={this.clickHandler}
+                    description={description}
+                  />
                 </div>
               );
             })}
