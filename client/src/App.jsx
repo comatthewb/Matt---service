@@ -9,7 +9,8 @@ class RelatedItems extends Component {
 
     this.state = {
       imagesURL: [],
-      description: []
+      description: [],
+      imageID: 0
     };
     this.clickHandler = this.clickHandler.bind(this);
   }
@@ -20,6 +21,7 @@ class RelatedItems extends Component {
       .then(response => {
         let randomItemsURL = [];
         let randomItemsName = [];
+        let randomItemsID = [];
         while (randomItemsURL.length < 6) {
           let randomIndex = Math.floor(
             Math.random() * Math.floor(response.data.length)
@@ -27,11 +29,13 @@ class RelatedItems extends Component {
           console.log(response.data[randomIndex]);
           randomItemsURL.push(response.data[randomIndex].item_url);
           randomItemsName.push(response.data[randomIndex].item_name);
+          randomItemsID.push(response.data[randomIndex].itemID);
           response.data.splice(randomIndex, 1);
         }
         this.setState({
           imagesURL: [...randomItemsURL],
-          description: [...randomItemsName]
+          description: [...randomItemsName],
+          imageID: [...randomItemsID]
         });
       })
       .catch(err => {
@@ -39,27 +43,35 @@ class RelatedItems extends Component {
       });
   }
 
-  clickHandler() {
-    console.log("this was clicked");
+  clickHandler(event, imageIDRender) {
+    console.log(event.imageIDRender);
+    window.localStorage.setItem("productID", event.imageIDRender);
   }
 
   render() {
     return (
       <div className="other-customers-parent-div">
         <div>
-          <h1>
+          <h1 id="relatedItemsHeader">
             <span>OTHER CUSTOMERS ALSO VIEWED</span>
           </h1>
           <div>
             {this.state.imagesURL.map((singleImage, index) => {
               const description = this.state.description[index];
+              const imageIDRender = this.state.imageID[index];
+
               return (
-                <div key={index} className="item-description-parent">
+                <div className="item-description-parent">
                   <RelatedItem
-                    onClick={this.clickHandler}
+                    key={index}
+                    imageIDRender={imageIDRender}
+                    onClick={event => {
+                      this.clickHandler(event, imageIDRender);
+                    }}
                     image={singleImage}
                   />
                   <RelatedItemDescription
+                    imageIDRender={imageIDRender}
                     onClick={this.clickHandler}
                     description={description}
                   />
