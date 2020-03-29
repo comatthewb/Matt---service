@@ -17,7 +17,9 @@ class RelatedItems extends Component {
 
   componentDidMount() {
     axios
-      .get("http://127.0.0.1:8082/items")
+      .get(
+        "http://mattservice-env.eba-grpmrn9j.us-east-2.elasticbeanstalk.com/items"
+      )
       .then(response => {
         let randomItemsURL = [];
         let randomItemsName = [];
