@@ -28,7 +28,7 @@ class RelatedItems extends Component {
           let randomIndex = Math.floor(
             Math.random() * Math.floor(response.data.length)
           );
-          console.log(response.data[randomIndex]);
+          // console.log(response.data[randomIndex]);
           randomItemsURL.push(response.data[randomIndex].item_url);
           randomItemsName.push(response.data[randomIndex].item_name);
           randomItemsID.push(response.data[randomIndex].itemID);
@@ -46,7 +46,7 @@ class RelatedItems extends Component {
   }
 
   clickHandler(event, imageIDRender) {
-    console.log(event.imageIDRender);
+    // console.log(event.imageIDRender);
     window.localStorage.setItem("productID", event.imageIDRender);
     window.localStorage.setItem("updated", false);
   }
