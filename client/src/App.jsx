@@ -46,6 +46,7 @@ class RelatedItems extends Component {
   clickHandler(event, imageIDRender) {
     console.log(event.imageIDRender);
     window.localStorage.setItem("productID", event.imageIDRender);
+    window.localStorage.setItem("updated", false);
   }
 
   render() {
