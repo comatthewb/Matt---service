@@ -1,14 +1,14 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-  host: "host.docker.internal", //host.docker.internal
+  host: "35.239.102.42", //host.docker.internal
   user: "root",
-  password: "hratx47hratx47", //hratx47hratx47
+  password: "password", //hratx47hratx47
   database: "pirate_data"
 });
 
 const getAllItems = callback =>
-  connection.query("SELECT * FROM arrtozone_inventory;", (err, result) => {
+  connection.query("SELECT * FROM ArrtoZone_Inventory;", (err, result) => {
     if (err) callback(err, null);
     else callback(null, result);
   });
